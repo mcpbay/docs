@@ -1,0 +1,360 @@
+// File: fundamentals\cli\mcpb-init
+
+# mcpb init
+
+Initialize the MCPB CLI project.
+
+## Syntax
+
+```sh
+mcpb init [options]
+```
+
+## Arguments
+
+### options
+
+#### --with-claude
+
+Initializes the project to work perfectly with Claude Code.
+
+---
+
+// File: fundamentals\cli\mcpb-self-update
+
+import ConfigOption from './_config-option.mdx';
+
+# mcpb self-update
+
+Initializes the MCP server with all the previously installed contexts.
+
+## Syntax
+
+```sh
+mcpb start-mcp [options]
+```
+
+## Arguments
+
+### options
+
+<ConfigOption/>
+
+---
+
+// File: fundamentals\cli\mcpb-add
+
+import ConfigOption from './_config-option.mdx';
+
+# mcpb add
+
+Install a new context.
+
+## Syntax
+
+```sh
+mcpb add [options] <slug>
+```
+
+## Arguments
+
+### options
+
+<ConfigOption/>
+
+### slug
+
+The slug identifier of the context to install.
+
+#### Examples
+
+```sh tab={"label":"Latest"}
+mcpb add messi-biography
+```
+
+```sh tab={"label":"Version"}
+mcpb add mcpbay-full-guide@1.0.3
+```
+
+---
+
+// File: fundamentals\cli\mcpb-install-mcp
+
+# mcpb install-mcp
+
+Installs the MCPB MCP server to an AI tool.
+
+## Syntax
+
+```sh
+mcpb install-mcp [options] <target>
+```
+
+## Arguments
+
+### options
+
+#### --mcp-name \<name\>
+
+Defines a name for the MCP.
+
+##### name
+
+The name of the MCP server.
+
+### target
+
+#### claudecode
+
+Install the MCPBay MCP Server in Claude Code, user scope.
+
+---
+
+// File: fundamentals\cli\mcpb-start-mcp
+
+import ConfigOption from './_config-option.mdx';
+
+# mcpb start-mcp
+
+Initializes the MCP server with all the previously installed contexts.
+
+## Syntax
+
+```sh
+mcpb start-mcp [options]
+```
+
+## Arguments
+
+### options
+
+<ConfigOption/>
+
+---
+
+// File: fundamentals\cli\_config-option
+
+#### -c, --config \<path\>
+
+Path to the config file (default: `./mcp-config.json`).
+
+---
+
+// File: getting-started\welcome
+
+# Welcome to MCPBay
+
+## What's MCPBay
+
+MCPBay is an "all in one" [MCP](miscs/about-mcp.md) contexts administrator. It allows users and developers to
+create, version, publish, and discover reusable AI contexts.
+
+## Why MCPBay
+
+With the AI boom we're living through, more and more people, developers, technologies, and businesses are trying to adapt to the latest LLMs released each cycle.
+
+Meanwhile, mid to senior-level developers and established businesses can afford the time investment required to learn and understand the [MCP protocol](miscs/about-mcp.md), as well as to write, publish, and maintain their MCPs. Regular users, on the other hand, are looking for cheaper and faster solutions to create robust MCPs.
+
+## How it works?
+
+Through this platform, you can create contexts, each with one or more available versions. You can manage the resources, prompts, and tools of each context you create.
+
+Once a context has been created, you can use it in your trusted AI tool thanks to our MCP server integrated within our CLI [mcpb](../cli/introduction.md).
+
+## What can I do with MCPBay?
+
+MCPBay platform offers a wide range of [capabilities](capabilities.md) that simplifies the construction of very robust contexts capable of handling most project requirements.
+
+To give you some ideas, you could...
+
+- Distribute non-sensitive (for now) information and resources along the members of an organization.
+- Extend LLM functionalities with custom tools.
+- Create predectible IA responses for your documents.
+- Connect your AI tools to your git repository to send full-explained PRs.
+- Document your projects.
+- Create personalities for your LLMs.
+
+And some more funny ideas:
+
+- Use the MCP to allow an LLM play a game.
+- Connect an LLM to a free LLM to delegate easy tasks.
+- Connect your MCP to your friend's AI tool to make it do wrong every task he requires.
+- Find by yourself a 0-ring vulnerability on both Android and iPhone devices to install your new MCP (I don't know how) into your crush's phone to make it explode when she calls you "friend". (Illegal, better don't...)
+
+---
+
+// File: getting-started\installation
+
+# Installation
+
+MCPBay CLI works on MacOS, Linux, and Windows. `mcpb` is a single binary executable. It has no external dependencies. On macOS, both M1 (arm64) and Intel (x64) executables are provided. On Linux and Windows, only x64 is supported.
+
+## Download and install
+
+MCPBay provides convenience scripts to download and install the binary.
+
+```sh tab={"label":"Windows (PowerShell)"}
+irm https://github.com/mcpbay/mcpb/releases/download/v1.1.1/install.ps1 | iex
+```
+
+```sh tab={"label":"Linux"}
+curl -fsSL https://github.com/mcpbay/mcpb/releases/download/v1.1.1/install.sh | sh
+```
+
+```sh tab={"label":"MacOS"}
+curl -fsSL https://github.com/mcpbay/mcpb/releases/download/v1.1.1/install.sh | sh
+```
+
+MCPBay binaries can also be installed manually, by downloading the appropiate binary from the [release section of our Github repository](https://github.com/mcpbay/mcpb/releases).
+
+## Source code
+
+The MCPBay CLI is open source, public and free to use under the MIT license, that includes the whole framework we created to handle the MCP protocol.
+
+You can access to it checking the [mcpb repository](https://github.com/mcpbay/mcpb).
+
+---
+
+// File: getting-started\first-experience
+
+# First experience
+
+MCPBay, through its CLI, allows the management of contexts for use within
+projects.
+
+:::note
+
+`mcpb` is the name of the instrument we utilize to manipulate the contexts we
+choose to use on our AI tools.
+
+:::
+
+## Initialize a new project
+
+To start installing and using your contexts, its required to initialize the
+default setting of `mcpb`. You can do it automatically running the following
+command in your terminal:
+
+```sh
+mcpb init
+```
+
+:::note
+
+`mcpb init --with-claude` can be used to make Claude Code correctly work with
+our mcp.
+
+:::
+
+This will create a file called `mcp-config.json`, and, if doesn't exists,
+another one called `AGENTS.md` with the required instructions to make the
+contexts work optimally.
+
+## Install a context
+
+To feed your LLM with contexts and new capabilities, you need to install them.
+An example to do this is the following command:
+
+```sh
+mcpb add typescript-best-practices@latest
+```
+
+Once finished, it will download and place the whole context inside the folder
+`context_modules` if it wasn't modified on the configuration file.
+
+## Use installed contexts
+
+The wire between installed contexts and your favourite AI tool is the MCPBay MCP
+Server. It must be connected. Because every AI tool is unique, we'll explain the
+automatic and manual installation of MCPBay MCP Server.
+
+### Automatic installation of MCPBay MCP Server
+
+#### Automatic installation on ClaudeCode
+
+To automatically connect the MCP to ClaudeCode you must run the following
+command on your terminal:
+
+```sh
+mcpb install-mcp claudecode
+```
+
+After this you can start using Claude Code as normal and it will have access to
+installed contexts.
+
+#### Manual installation
+
+MCPBay MCP is easily installable to any AI tool that supports MCPs.
+
+Commonly, to install your MCP to an AI tool by yourself is needed to modify some
+`.json` file. For [Claude Code](https://code.claude.com/docs/en/mcp), depending
+of the scope, you may need to update the `mcpServers` member inside of the
+`.claude.json` or, `.mcp.json` file.
+
+:::note
+
+The name of the MCP (`mcpb`) can be changed without problems.
+
+:::
+
+```json tab={"label":"Claude Code"}
+{
+  "mcpServers": {
+    "mcpb": {
+      "command": "mcpb",
+      "args": ["start-mcp"]
+    }
+  }
+}
+```
+
+```json tab={"label":"OpenCode"}
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "mcpbay": {
+      "type": "local",
+      "command": ["mcpb", "start-mcp"],
+      "environment": {},
+      "enabled": true
+    }
+  }
+}
+```
+
+```json tab={"label":"Cursor"}
+{
+  "mcpServers": {
+    "mcpb": {
+      "command": "mcpb",
+      "args": ["start-mcp"]
+    }
+  }
+}
+```
+
+Once installed you can start using the installed contexts.
+
+---
+
+// File: index
+
+import { Redirect } from '@docusaurus/router';
+
+export default function Home() {
+  return <Redirect to="/getting-started/welcome" />;
+}
+
+---
+
+// File: miscs\about-mcp
+
+# About MCP
+
+## What's an MCP
+
+An MCP refers to programs that, by following the MCP protocol, extend the capabilities of an LLM (commonly used through an AI tool such as ClaudeCode) by providing specialized information (context), as well as tools and even templates to obtain more deterministic responses from the LLM (prompts).
+
+### What's the MCP Protocol
+
+A protocol is a guideline for how to do something. In this case, MCP (Model Context Protocol) describes the structure and transport mechanisms that information and communication must follow in order to extend LLM knowledge and capabilities.

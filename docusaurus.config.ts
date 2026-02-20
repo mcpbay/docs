@@ -9,7 +9,16 @@ const config: Config = {
   title: 'MCPBay Docs',
   tagline: 'Your context distributor of confidence.',
   favicon: 'img/favicon.ico',
-  
+
+  plugins: [
+    [
+      "docusaurus-plugin-generate-llms-txt",
+      {
+        outputFile: "llms.txt", // defaults to llms.txt if not specified
+      },
+    ]
+  ],
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -73,9 +82,9 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
         // { to: '/blog', label: 'Blog', position: 'left' },
         {
