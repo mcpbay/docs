@@ -6,10 +6,10 @@ import tabBlocks from "docusaurus-remark-plugin-tab-blocks";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'MCPBay Docs',
+  tagline: 'Your context distributor of confidence.',
   favicon: 'img/favicon.ico',
-
+  
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -50,21 +50,7 @@ const config: Config = {
           beforeDefaultRemarkPlugins: [require('remark-extended-table'), tabBlocks],
 
         },
-        blog: false /*{
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        }*/,
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -79,9 +65,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'MCPBay Docs',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'MCPBay Logo',
         src: 'img/logo.svg',
       },
       items: [
