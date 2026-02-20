@@ -159,11 +159,11 @@ Meanwhile, mid to senior-level developers and established businesses can afford 
 
 Through this platform, you can create contexts, each with one or more available versions. You can manage the resources, prompts, and tools of each context you create.
 
-Once a context has been created, you can use it in your trusted AI tool thanks to our MCP server integrated within our CLI [mcpb](../cli/introduction.md).
+Once a context has been created, you can use it in your trusted AI tool thanks to our MCP server integrated within our CLI [mcpb](../fundamentals/cli/mcpb-init.md).
 
 ## What can I do with MCPBay?
 
-MCPBay platform offers a wide range of [capabilities](capabilities.md) that simplifies the construction of very robust contexts capable of handling most project requirements.
+MCPBay platform offers a wide range of capabilities that simplifies the construction of very robust contexts capable of handling most project requirements.
 
 To give you some ideas, you could...
 
