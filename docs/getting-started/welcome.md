@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## What's MCPBay
 
-MCPBay is an "all in one" [MCP](miscs/about-mcp.md) administrator. It allows users and developers to
+MCPBay is an "all in one" [MCP](miscs/about-mcp.md) contexts administrator. It allows users and developers to
 create, version, publish, and discover reusable AI contexts.
 
 ## Why MCPBay
@@ -15,11 +15,17 @@ With the AI boom we're living through, more and more people, developers, technol
 
 Meanwhile, mid to senior-level developers and established businesses can afford the time investment required to learn and understand the [MCP protocol](miscs/about-mcp.md), as well as to write, publish, and maintain their MCPs. Regular users, on the other hand, are looking for cheaper and faster solutions to create robust MCPs.
 
+## How it works?
+
+Through this platform, you can create contexts, each with one or more available versions. You can manage the resources, prompts, and tools of each context you create.
+
+Once a context has been created, you can use it in your trusted AI tool thanks to our MCP server integrated within our CLI [mcpb](../cli/introduction.md).
+
 ## What can I do with MCPBay?
 
-MCPBay offers a wide range of [capabilities](capabilities.md) that enable the construction of very robust MCPs capable of handling most project requirements.
+MCPBay platform offers a wide range of [capabilities](capabilities.md) that simplifies the construction of very robust contexts capable of handling most project requirements.
 
-To give you some ideas...:
+To give you some ideas, you could...
 
 - Distribute non-sensitive (for now) information and resources along the members of an organization.
 - Extend LLM functionalities with custom tools.

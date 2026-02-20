@@ -1,6 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import tabBlocks from "docusaurus-remark-plugin-tab-blocks";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -46,7 +47,7 @@ const config: Config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           routeBasePath: '/',
-          beforeDefaultRemarkPlugins: [require('remark-extended-table')],
+          beforeDefaultRemarkPlugins: [require('remark-extended-table'), tabBlocks],
         },
         blog: false /*{
           showReadingTime: true,
