@@ -131,8 +131,29 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} MCPBay`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.github, // Keep the light theme
+      darkTheme: { // Custom dark theme
+        plain: {
+          color: '#9F9FA9', // General text color
+          backgroundColor: '#09090B', // Dark mode background
+        },
+        styles: [
+          // Default style for most tokens
+          {
+            types: ['comment', 'prolog', 'doctype', 'cdata', 'punctuation', 'operator', 'entity', 'url', 'symbol', 'regex', 'atrule', 'attr-name', 'tag', 'selector', 'boolean', 'constant', 'builtin', 'char', 'string', 'number', 'variable', 'property', 'keyword', 'function'],
+            style: {
+              color: '#9F9FA9', // General text color
+            },
+          },
+          // Applying #39A2FF to specific "selected" elements.
+          {
+            types: ['keyword', 'function', 'string', 'tag', 'selector', 'atrule', 'property', 'builtin', 'entity', 'constant', 'symbol'],
+            style: {
+              color: '#39A2FF', // "Selected" text color
+            },
+          },
+        ],
+      },
     },
   } satisfies Preset.ThemeConfig,
 };
