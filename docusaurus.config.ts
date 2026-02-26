@@ -7,7 +7,7 @@ import tabBlocks from "docusaurus-remark-plugin-tab-blocks";
 
 const config: Config = {
   title: 'MCPBay Docs',
-  tagline: 'Your context distributor of confidence.',
+  tagline: 'Discover and share trusted context catalogs for MCP. Build smarter AI with high-quality resources.',
   favicon: 'img/favicon.ico',
 
   plugins: [
@@ -68,8 +68,17 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/og-image.png',
+    metadata: [
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { property: 'og:site_name', content: 'MCPBay' },
+      { property: 'og:title', content: 'MCPBay Docs — Trusted Context Catalogs for AI-Driven Teams' },
+      { property: 'og:description', content: 'MCPBay: Discover and share trusted context catalogs for MCP. Build smarter AI with high-quality resources.' },
+      { property: 'og:image', content: '/img/og-image.png' },
+      { name: 'twitter:title', content: 'MCPBay Docs — Trusted Context Catalogs for AI-Driven Teams' },
+      { name: 'twitter:description', content: 'MCPBay: Discover and share trusted context catalogs for MCP. Build smarter AI with high-quality resources.' },
+      { name: 'twitter:image', content: '/img/og-image.png' },
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
