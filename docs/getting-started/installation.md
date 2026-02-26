@@ -11,15 +11,15 @@ MCPBay CLI works on MacOS, Linux, and Windows. `mcpb` is a single binary executa
 MCPBay provides convenience scripts to download and install the binary.
 
 ```sh tab={"label":"Windows (PowerShell)"}
-irm https://github.com/mcpbay/mcpb/releases/download/v1.1.1/install.ps1 | iex
+irm https://mcpbay.io/install.ps1 | iex
 ```
 
 ```sh tab={"label":"Linux"}
-curl -fsSL https://github.com/mcpbay/mcpb/releases/download/v1.1.1/install.sh | sh
+curl -fsSL https://mcpbay.io/install.sh | sh
 ```
 
 ```sh tab={"label":"MacOS"}
-curl -fsSL https://github.com/mcpbay/mcpb/releases/download/v1.1.1/install.sh | sh
+curl -fsSL https://mcpbay.io/install.sh | sh
 ```
 
 MCPBay binaries can also be installed manually, by downloading the appropiate binary from the [release section of our Github repository](https://github.com/mcpbay/mcpb/releases).
