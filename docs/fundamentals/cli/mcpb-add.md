@@ -20,6 +20,14 @@ mcpb add [options] <slug>
 
 <ConfigOption/>
 
+#### -f, --force
+
+Forces installation, does not matters if the context already exists on disk or the new context is outdated.
+
+#### --silent
+
+Do not print any information on terminal. 
+
 ### slug
 
 The slug identifier of the context to install.
