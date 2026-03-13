@@ -20,12 +20,16 @@ mcpb install-mcp [options] <target>
 
 Defines a name for the MCP.
 
+#### --scope \<scope\>
+
+Defines the installation scope: `project`, `global`, and `user`.
+
 ##### name
 
 The name of the MCP server.
 
 ### target
 
-#### claudecode
-
-Install the MCPBay MCP Server in Claude Code, user scope.
+- claudecode
+- opencode
+- cursor
